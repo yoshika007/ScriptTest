@@ -14,14 +14,16 @@ public class Boss
         for (int i = 1; i <= 11; i++)
         {
             
-            this.mp = mp - 5;
+            
 
-            if (mp > 0)
+            if (mp >= 5)
             {
+                this.mp = mp - 5;
                 Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
             }
-            else
+            else if (mp < 5)
             {
+                
                 Debug.Log("MPが足りないため魔法が使えない。");
             }
 
