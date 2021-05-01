@@ -11,23 +11,17 @@ public class Boss
     public void Magic()
     {
 
-        for (int i = 1; i <= 11; i++)
-        {
-            
-            
-
+        
             if (mp >= 5)
             {
                 this.mp = mp - 5;
                 Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
             }
-            else if (mp < 5)
+            else
             {
                 
                 Debug.Log("MPが足りないため魔法が使えない。");
             }
-
-        }
 
     }
 
@@ -42,8 +36,14 @@ public class Test : MonoBehaviour
         // Bossクラスの変数を宣言してインスタンスを代入
         Boss lastboss = new Boss();
 
-        // 攻撃用の関数を呼び出す
-        lastboss.Magic();
+        for (int i = 1; i <= 11; i++)
+        {
+
+            // 攻撃用の関数を呼び出す
+            lastboss.Magic();
+
+        }
+        
         
 
 
